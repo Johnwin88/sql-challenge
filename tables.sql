@@ -3,6 +3,7 @@ CREATE TABLE titles (
     title VARCHAR   NOT NULL,
     PRIMARY KEY (title_id)
 );
+
 CREATE TABLE employees (
     emp_no INT   NOT NULL,
     emp_title_id VARCHAR NOT NULL,
@@ -14,7 +15,6 @@ CREATE TABLE employees (
     FOREIGN KEY (emp_title_id) REFERENCES titles (title_id),
     PRIMARY KEY (emp_no)
 );
-
 
 CREATE TABLE departments (
     dept_no VARCHAR   NOT NULL,
@@ -37,7 +37,6 @@ CREATE TABLE dept_emp (
     FOREIGN KEY (dept_no) REFERENCES departments (dept_no),
     PRIMARY KEY (emp_no, dept_no)
 );
-
 
 CREATE TABLE salaries (
     emp_no INT   NOT NULL,
